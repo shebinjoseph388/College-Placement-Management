@@ -1,0 +1,59 @@
+/* CSS Document */
+
+.draggable {
+	visibility: hidden;
+    /*background-color: #D4D0C8;
+	background-color: ;*/
+	background: #B7D678 url(images/popup_bg.jpg) repeat-x;
+    /*border: 1px solid #000000;*/
+	border: 1px solid #54781F;
+	position: absolute;
+	text-align: left;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#333333, Direction=135, Strength=3);
+}
+
+.drag_handle {
+	cursor: move;
+	padding: 3px 2px;
+	/*background-color:  #333333;*/
+	/*background-color: #3E5B15;*/
+	background-color: #B7D67;
+	/*color: #FFFFFF;*/
+	color: #333333;
+	font-weight: bold;
+	margin-bottom: 5px;
+	text-align: left;
+	text-indent: 5px;
+	line-height: 18px;
+	overflow: hidden;
+	
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.close_button {
+	position: absolute;
+	background: url(images/close_button.jpg) no-repeat;
+	width: 14px;
+	height: 14px;
+	top: 3px;
+	right: 4px;
+	cursor: pointer;
+}
+
+.draggable .drag_body {
+	clear: both;
+	margin: 0px auto;
+	text-align: left;
+	background-color: #FFFFFF;
+}
+.draggable .drag_body .drag_body_inner {
+	margin: 4px;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+.drag_body iframe {
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+}

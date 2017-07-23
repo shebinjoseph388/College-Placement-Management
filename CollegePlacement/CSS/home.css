@@ -1,0 +1,132 @@
+
+
+
+
+/*----------------------------
+	Styling the forms
+-----------------------------*/
+
+
+
+
+*{
+	margin:0;
+	padding:0;
+}
+
+section, footer{
+	display: block;
+}
+#formContainer{
+	
+	
+	position:relative;
+	z-index:1;
+	
+	-moz-perspective: 800px;
+	-webkit-perspective: 800px;
+	perspective: 800px;
+}
+
+
+#formContainer form{
+	width:100%;
+	height:100%;
+	position:absolute;
+	margin:0;
+	padding:0; 
+top:0;
+	left:0;
+	
+	/* Enabling 3d space for the transforms */
+	-moz-transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	
+	/* When the forms are flipped, they will be hidden */
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	
+	/* Enabling a smooth animated transition */
+	-moz-transition:0.8s;
+	-webkit-transition:0.8s;
+	transition:0.8s;
+	
+	/* Configure a keyframe animation for Firefox */
+	-moz-animation: pulse 2s infinite;
+	
+	/* Configure it for Chrome and Safari */
+	/*-webkit-animation: pulse 2s infinite;*/
+}
+/* Firefox Keyframe Animation */
+@-moz-keyframes pulse{
+	0%{		box-shadow:0 0 1px #008aff;}
+	50%{	box-shadow:0 0 8px #008aff;}
+	100%{	box-shadow:0 0 1px #008aff;}
+}
+
+/* Webkit keyframe animation */
+@-webkit-keyframes pulse{
+	0%{		box-shadow:0 0 1px #008aff;}
+	50%{	box-shadow:0 0 10px #008aff;}
+	100%{	box-shadow:0 0 1px #008aff;}
+}
+
+#signin_student_form{
+	
+	
+	
+	/* Rotating the recover password form by default */
+	-moz-transform:rotateY(180deg);
+	-webkit-transform:rotateY(180deg);
+	transform:rotateY(180deg);
+	
+}
+#signin_student_form h1{
+    background: none repeat scroll 0 0 #0092C8;
+    border-bottom: 1px solid #007DAB;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin: 0 0 1.5em;
+    padding: 5px 10px;
+    text-shadow: 0 1px 0 #007DAB;
+}
+
+#formContainer.flipped #login_form1{
+	
+	opacity:1;
+	
+	/**
+	 * Rotating the login form when the
+	 * flipped class is added to the container
+	 */
+	
+	-moz-transform:rotateY(-180deg);
+	-webkit-transform:rotateY(-180deg);
+	transform:rotateY(-180deg);
+}
+
+#formContainer.flipped #signin_student_form{
+	
+	opacity:1;
+	position:absolute;
+	/* Rotating the recover div into view */
+	-moz-transform:rotateY(0deg);
+	-webkit-transform:rotateY(0deg);
+	transform:rotateY(0deg);
+}
+
+
+/*----------------------------
+	Inputs, Buttons & Links
+-----------------------------*/
+
+
+
+
+#signin_student_form .flipLink{
+	right:auto;
+	left:0;
+}
+

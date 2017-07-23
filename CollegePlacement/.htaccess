@@ -1,0 +1,312 @@
+<IfModule mod_rewrite.c>
+
+   RewriteEngine on
+    
+   RewriteCond %{REQUEST_URI}  /New/
+   RewriteRule ^New/(.*) /Placement@KJC/APR/$1
+#RewriteRule ^APR/(.*) /New/$1 [L,R=301]
+  RewriteCond %{REQUEST_URI} /SignUp-College$
+RewriteRule .* /Placement@KJC/APR/signup.php [L]
+
+RewriteCond %{REQUEST_URI}  /Admin/
+   RewriteRule ^Admin/(.*) /Placement@KJC/nehadmin/$1
+   
+
+  RewriteCond %{REQUEST_URI} /Admin-Statistics$
+RewriteRule .* /Placement@KJC/nehadmin/dashboard.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Users$
+RewriteRule .* /Placement@KJC/nehadmin/admin_user.php [L]
+RewriteCond %{REQUEST_URI} /College-Batch-Year$
+RewriteRule .* /Placement@KJC/nehadmin/batch.php [L]
+RewriteCond %{REQUEST_URI} /College-Courses$
+RewriteRule .* /Placement@KJC/nehadmin/departments.php [L]
+RewriteCond %{REQUEST_URI} /College-Batches$
+RewriteRule .* /Placement@KJC/nehadmin/department.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Student-Lists$
+RewriteRule .* /Placement@KJC/nehadmin/students.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Edit-Student-Lists$
+RewriteRule .* /Placement@KJC/nehadmin/edit_student.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Recruitors$
+RewriteRule .* /Placement@KJC/nehadmin/recruitor.php [L]
+RewriteCond %{REQUEST_URI} /Admin-College-Member$
+RewriteRule .* /Placement@KJC/nehadmin/member_college.php [L]
+RewriteCond %{REQUEST_URI} /Admin-TeacherLists$
+RewriteRule .* /Placement@KJC/nehadmin/teachers.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Downloadable-Materials$
+RewriteRule .* /Placement@KJC/nehadmin/downloadable.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Announced-Placements$
+RewriteRule .* /Placement@KJC/nehadmin/placement_overview.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Home-Contents$
+RewriteRule .* /Placement@KJC/nehadmin/content.php [L]
+RewriteCond %{REQUEST_URI} /Admin-AdminUsers-LogDetails$
+RewriteRule .* /Placement@KJC/nehadmin/user_log.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Activity-Details$
+RewriteRule .* /Placement@KJC/nehadmin/activity_log.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Calendar-Events$
+RewriteRule .* /Placement@KJC/nehadmin/calendar_of_events.php [L]
+RewriteCond %{REQUEST_URI} /Admin-LogOut$
+RewriteRule .* /Placement@KJC/nehadmin/logout.php [L]
+RewriteCond %{REQUEST_URI} /Admin-User-Edit$
+RewriteRule .* /Placement@KJC/nehadmin/edit_user.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Batch-Edit$
+RewriteRule .* /Placement@KJC/nehadmin/edit_year.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Course-Edit$
+RewriteRule .* /Placement@KJC/nehadmin/edit_course.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Department-Edit$
+RewriteRule .* /Placement@KJC/nehadmin/edit_department.php [L]
+RewriteCond %{REQUEST_URI} /Admin-UnRegister-Students$
+RewriteRule .* /Placement@KJC/nehadmin/unreg_students.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Register-Students$
+RewriteRule .* /Placement@KJC/nehadmin/reg_students.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Register-Recruitor$
+RewriteRule .* /Placement@KJC/nehadmin/reg_recruitor.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Edit-Recruitor$
+RewriteRule .* /Placement@KJC/nehadmin/edit_recruitor.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Edit-Member-College$
+RewriteRule .* /Placement@KJC/nehadmin/edit_member.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Edit-Executive$
+RewriteRule .* /Placement@KJC/nehadmin/edit_teacher.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Edit-Home-Content$
+RewriteRule .* /Placement@KJC/nehadmin/edit_content.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Placement-Registered-Students$
+RewriteRule .* /Placement@KJC/nehadmin/admin_view_submit_placement.php [L]
+RewriteCond %{REQUEST_URI} /Admin-View-Filter-Student-PlacementForm$
+RewriteRule .* /Placement@KJC/nehadmin/admin_view_filter_placementform.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Print-Registered-Record$
+RewriteRule .* /Placement@KJC/nehadmin/admin_print_registered_students_pdf.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Registered-Student-Excel$
+RewriteRule .* /Placement@KJC/nehadmin/admin-registered-student-excel.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Placementform-Excel$
+RewriteRule .* /Placement@KJC/nehadmin/admin_placementform_excel.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Process-Filter-Student$
+RewriteRule .* /Placement@KJC/nehadmin/admin_student_filter_process.php [L]
+RewriteCond %{REQUEST_URI} /Admin-Filter-Students$
+RewriteRule .* /Placement@KJC/nehadmin/admin_filter_students.php [L]
+   
+RewriteCond %{REQUEST_URI} /Student-SignUp-Form$
+RewriteRule .* /Placement@KJC/signup_student.php [L]
+
+RewriteCond %{REQUEST_URI} /Home$
+RewriteRule .* /Placement@KJC/index.php [L]
+RewriteCond %{REQUEST_URI} /Contact-Us$
+RewriteRule .* /Placement@KJC/about.php [L]
+RewriteCond %{REQUEST_URI} /Placements$
+RewriteRule .* /Placement@KJC/calendar_of_events.php [L]
+RewriteCond %{REQUEST_URI} /Placed-Student-Lists$
+RewriteRule .* /Placement@KJC/placed_candidates.php [L]
+RewriteCond %{REQUEST_URI} /Placement-Coordinators-in-KJC$
+RewriteRule .* /Placement@KJC/coordinators.php [L]
+RewriteCond %{REQUEST_URI} /Reports$
+RewriteRule .* /Placement@KJC/history.php [L]
+RewriteCond %{REQUEST_URI} /Register-New-Company$
+RewriteRule .* /Placement@KJC/register_company_placement.php [L]
+RewriteCond %{REQUEST_URI} /Denied-Access$
+RewriteRule .* /Placement@KJC/access_denied.php [L]
+RewriteCond %{REQUEST_URI} /Executive-Dashboard$
+RewriteRule .* /Placement@KJC/dasboard_teacher.php [L]
+RewriteCond %{REQUEST_URI} /Executive-Notifications$
+RewriteRule .* /Placement@KJC/notification_teacher.php [L]
+RewriteCond %{REQUEST_URI} /Executive-Messages$
+RewriteRule .* /Placement@KJC/teacher_message.php [L]
+RewriteCond %{REQUEST_URI} /Executive-Backpack$
+RewriteRule .* /Placement@KJC/teacher_backack.php [L]
+RewriteCond %{REQUEST_URI} /Add-Studymaterials$
+RewriteRule .* /Placement@KJC/add_studymaterial.php [L]
+RewriteCond %{REQUEST_URI} /Placement-Details$
+RewriteRule .* /Placement@KJC/teacher_share.php [L]
+RewriteCond %{REQUEST_URI} /Aptitude-Exam$
+RewriteRule .* /Placement@KJC/teacher_quiz1.php [L]
+RewriteCond %{REQUEST_URI} /Edit-Aptitude-Exam$
+RewriteRule .* /Placement@KJC/edit_quiz.php [L]
+RewriteCond %{REQUEST_URI} /MyShare$
+RewriteRule .* /Placement@KJC/teacher_share1.php [L]
+RewriteCond %{REQUEST_URI} /Student-List$
+RewriteRule .* /Placement@KJC/add_member.php [L]
+RewriteCond %{REQUEST_URI} /MyStudents$
+RewriteRule .* /Placement@KJC/my_students.php [L]
+RewriteCond %{REQUEST_URI} /Placement-Overview$
+RewriteRule .* /Placement@KJC/placement_overview.php [L]
+RewriteCond %{REQUEST_URI} /Downloadable-Materials$
+RewriteRule .* /Placement@KJC/downloadable.php [L]
+RewriteCond %{REQUEST_URI} /Placement-Panel$
+RewriteRule .* /Placement@KJC/placement.php [L]
+#RewriteCond %{REQUEST_URI} /APR/Placement-Register-College$
+#RewriteRule .* /Placement@KJC/APR/signup.php [L]
+RewriteCond %{REQUEST_URI} /APR/Register-Success$
+RewriteRule .* /Placement@KJC/APR/success.php [L]
+RewriteCond %{REQUEST_URI} /Upload-Student-Details$
+RewriteRule .* /Placement@KJC/uploadstudinfo.php [L]
+RewriteCond %{REQUEST_URI} /Edit-Student-Details$
+RewriteRule .* /Placement@KJC/edit_student.php [L]
+RewriteCond %{REQUEST_URI} /View-PlacementForm-Exe$
+RewriteRule .* /Placement@KJC/view_member.php [L]
+RewriteCond %{REQUEST_URI} /View-PlacementForm-Student-Exe$
+RewriteRule .* /Placement@KJC/view_member_student.php [L]
+RewriteCond %{REQUEST_URI} /View-Filter-Student-PlacementForm$
+RewriteRule .* /Placement@KJC/view_filter_student_form.php [L]
+RewriteCond %{REQUEST_URI} /UnRegistered-Students$
+RewriteRule .* /Placement@KJC/unreg_students.php [L]
+RewriteCond %{REQUEST_URI} /Registered-Students$
+RewriteRule .* /Placement@KJC/reg_students.php [L]
+RewriteCond %{REQUEST_URI} /Print-Placementform-PDF$
+RewriteRule .* /Placement@KJC/print_placementform_pdf.php [L]
+RewriteCond %{REQUEST_URI} /Placementform_Excel$
+RewriteRule .* /Placement@KJC/placementform_excel.php [L]
+RewriteCond %{REQUEST_URI} /Placementform-Complete-Excel$
+RewriteRule .* /Placement@KJC/placementform_excel_complete.php [L]
+RewriteCond %{REQUEST_URI} /Registered-Student-Excel$
+RewriteRule .* /Placement@KJC/registered_student_excel.php [L]
+RewriteCond %{REQUEST_URI} /Add-Question-Exam$
+RewriteRule .* /Placement@KJC/add_question.php [L]
+RewriteCond %{REQUEST_URI} /Question-Exam$
+RewriteRule .* /Placement@KJC/quiz_question.php [L]
+RewriteCond %{REQUEST_URI} /Edit-Question-Exam$
+RewriteRule .* /Placement@KJC/edit_question.php [L]
+
+
+
+RewriteCond %{REQUEST_URI} /Notification-Student$
+RewriteRule .* /Placement@KJC/student_notification.php [L]
+RewriteCond %{REQUEST_URI} /Student-Dashboard$
+RewriteRule .* /Placement@KJC/dashboard_student.php [L]
+RewriteCond %{REQUEST_URI} /Mssages-Student$
+RewriteRule .* /Placement@KJC/student_message.php [L]
+RewriteCond %{REQUEST_URI} /Mssages-Student-Sent$
+RewriteRule .* /Placement@KJC/sent_message_student.php [L]
+RewriteCond %{REQUEST_URI} /Submit-PlacementForm$
+RewriteRule .* /Placement@KJC/placementform_submit.php [L]
+RewriteCond %{REQUEST_URI} /PlacementForm-View$
+RewriteRule .* /Placement@KJC/myplacementform.php [L]
+RewriteCond %{REQUEST_URI} /StudyMaterials$
+RewriteRule .* /Placement@KJC/downloaded_materials.php [L]
+RewriteCond %{REQUEST_URI} /Placement-Progress$
+RewriteRule .* /Placement@KJC/progress.php [L]
+RewriteCond %{REQUEST_URI} /Student-Downloadable-Materials$
+RewriteRule .* /Placement@KJC/downloadable_student.php [L]
+RewriteCond %{REQUEST_URI} /Apply-For-Placement$
+RewriteRule .* /Placement@KJC/placement_student.php [L]
+RewriteCond %{REQUEST_URI} /View-Announcements$
+RewriteRule .* /Placement@KJC/announcements_student.php [L]
+RewriteCond %{REQUEST_URI} /View-Placement-Calendar$
+RewriteRule .* /Placement@KJC/class_calendar_student.php [L]
+RewriteCond %{REQUEST_URI} /PlacementForm-Edit$
+RewriteRule .* /Placement@KJC/edit_placementform.php [L]
+RewriteCond %{REQUEST_URI} /Complete-View-PlacementForm$
+RewriteRule .* /Placement@KJC/view_placementform_complete.php [L]
+RewriteCond %{REQUEST_URI} /Placement-Register-Student$
+RewriteRule .* /Placement@KJC/submit_placement.php [L]
+RewriteCond %{REQUEST_URI} /Profile-Change$
+RewriteRule .* /Placement@KJC/change_password_student.php [L]
+RewriteCond %{REQUEST_URI} /Placement-LogOut$
+RewriteRule .* /Placement@KJC/logout.php [L]
+RewriteCond %{REQUEST_URI} /Exam-View-List$
+RewriteRule .* /Placement@KJC/student_quiz_list.php [L]
+RewriteCond %{REQUEST_URI} /Take-Exam$
+RewriteRule .* /Placement@KJC/take_test.php [L]
+RewriteCond %{REQUEST_URI} /Upload-Photo$
+RewriteRule .* /Placement@KJC/student_avatar.php [L]
+RewriteCond %{REQUEST_URI} /Profile-Change-Executive$
+RewriteRule .* /Placement@KJC/change_password_teacher.php [L]
+RewriteCond %{REQUEST_URI} /MyProfileData$
+RewriteRule .* /Placement@KJC/profile_teacher.php [L]
+RewriteCond %{REQUEST_URI} /Upload-Photo-Executive$
+RewriteRule .* /Placement@KJC/teacher_avatar.php [L]
+RewriteCond %{REQUEST_URI} /Add-Students-to-Class$
+RewriteRule .* /Placement@KJC/add_student.php [L]
+RewriteCond %{REQUEST_URI} /Student-List-Print$
+RewriteRule .* /Placement@KJC/print_student.php [L]
+RewriteCond %{REQUEST_URI} /Filter-Students$
+RewriteRule .* /Placement@KJC/add_downloadable.php [L]
+RewriteCond %{REQUEST_URI} /Process-Filter-Student$
+RewriteRule .* /Placement@KJC/studentfilterprocessing.php [L]
+RewriteCond %{REQUEST_URI} /Print-Student-Filter$
+RewriteRule .* /Placement@KJC/print_filter_student.php [L]
+RewriteCond %{REQUEST_URI} /Print-Result-Record$
+RewriteRule .* /Placement@KJC/print_result_pdf.php [L]
+RewriteCond %{REQUEST_URI} /Placement-Registered-Students$
+RewriteRule .* /Placement@KJC/view_submit_placement.php [L]
+RewriteCond %{REQUEST_URI} /Placement-Delete$
+RewriteRule .* /Placement@KJC/delete_placement.php [L]
+RewriteCond %{REQUEST_URI} /Executive-Announcement$
+RewriteRule .* /Placement@KJC/announcements.php [L]
+RewriteCond %{REQUEST_URI} /Placement-Calendar$
+RewriteRule .* /Placement@KJC/class_calendar.php [L]
+RewriteCond %{REQUEST_URI} /Aptitude-Overview$
+RewriteRule .* /Placement@KJC/class_quiz.php [L]
+RewriteCond %{REQUEST_URI} /Add-Exam$
+RewriteRule .* /Placement@KJC/add_quiz1.php [L]
+RewriteCond %{REQUEST_URI} /Add-Exam-to-Class$
+RewriteRule .* /Placement@KJC/add_quiz_to_class.php [L]
+RewriteCond %{REQUEST_URI} /LogOut-Executive$
+RewriteRule .* /Placement@KJC/logout_teacher.php [L]
+RewriteCond %{REQUEST_URI} /Print-Student-Record$
+RewriteRule .* /Placement@KJC/print_pdf.php [L]
+RewriteCond %{REQUEST_URI} /Print-Filter-Record$
+RewriteRule .* /Placement@KJC/print_filter_pdf.php [L]
+RewriteCond %{REQUEST_URI} /Print-Registered-Record$
+RewriteRule .* /Placement@KJC/print_registered_students_pdf.php [L]
+RewriteCond %{REQUEST_URI} /Filter-Student-Excel$
+RewriteRule .* /Placement@KJC/filter_student_excel.php [L]
+
+
+RewriteCond %{REQUEST_URI} /Register-Home$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule .* /Placement@KJC/collegehandler/ [L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule (.*)$ $1.php [L]
+#RewriteRule ^index$ index.php [L]
+#RewriteCond %{REQUEST_URI} /index$
+#RewriteRule .* /Placement@KJC/index.php [L]
+
+
+
+Options -Indexes
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\index.php [NC]
+RewriteRule ^ %1 [R,L]
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME}\.php -f
+#RewriteRule ^(.*)$ $1.php [L]
+#RewriteRule ^index$ index.php [L]
+
+
+#Options +Indexes 
+# or #
+#IndexIgnore *
+
+
+ #RewriteCond %{REQUEST_FILENAME} !-f
+  #RewriteCond %{REQUEST_FILENAME} !-d
+  #RewriteCond %{REQUEST_URI} !=/favicon.ico
+  #RewriteRule ^(.*)$ $1.php [L,QSA]
+   
+  # RewriteRule /nehadmin/.* api.php
+   # RewriteRule  ^Xu8JuefAtua.php$ index.php 
+#RewriteRule   ^kjc/(.+)$   p/index.php?title=$1   [L]
+#RewriteRule ^custom signup_student.php [NC,L]
+#RewriteBase /KristuJayantiCollege/
+
+#RewriteCond %{REQUEST_URI} ^KristuJayantiCollege.*
+ #   RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+
+#RewriteRule ^dfdf$ signup_student.php [L]
+#RewriteRule ^er$ index.php [L]
+
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php?/$1 [L]
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+    # If we don't have mod_rewrite installed, all 404's
+    # can be sent to index.php, and everything works as normal.
+   
+
+    ErrorDocument 404 /index.php
+</IfModule>
